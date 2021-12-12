@@ -1,11 +1,10 @@
 {
-  "name": "esbuild-plugin-less",
+  "name": "@zeyad-aql/esbuild-plugin-less",
   "version": "1.0.0",
   "description": "esbuild plugin for less files",
-  "repository": "https://github.com/iam-medvedev/esbuild-plugin-less.git",
-  "homepage": "https://github.com/iam-medvedev/esbuild-plugin-less#readme",
-  "bugs": "https://github.com/iam-medvedev/esbuild-plugin-less/issues",
-  "author": "Ilya Medvedev <ilya@medvedev.im>",
+  "repository": "https://github.com/zeyad-aql-nagwa/esbuild-plugin-less.git",
+  "homepage": "https://github.com/zeyad-aql-nagwa/esbuild-plugin-less#readme",
+  "author": "",
   "license": "WTFPL",
   "main": "build/cjs.js",
   "module": "build/esm.mjs",
@@ -15,13 +14,10 @@
     "package.json"
   ],
   "scripts": {
-    "build": "NODE_ENV=production ts-node ./scripts/build.ts",
+    "build": "NODE_ENV=production ts-node ./scripts/build.ts && npm run build:types",
     "build:types": "NODE_ENV=production tsc --emitDeclarationOnly --declaration --outDir build",
-    "dev:example": "ts-node ./example/build.ts",
-    "build:example": "NODE_ENV=production ts-node ./example/build.ts",
     "commit": "yarn git-cz",
-    "types": "tsc --noEmit",
-    "test": "jest"
+    "types": "tsc --noEmit"
   },
   "exports": {
     "import": "./build/esm.mjs",

@@ -39,7 +39,7 @@ export const lessLoader = (options: Less.Options = {}, loaderOptions: LoaderOpti
 
           return {
             contents: result.css,
-            loader: 'css',
+            loader: 'text',
             resolveDir: dir,
           };
         } catch (e) {
